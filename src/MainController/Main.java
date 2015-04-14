@@ -1,18 +1,63 @@
 package MainController;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("MainController.fxml"));
+        Parent myScene = FXMLLoader.load(getClass().getResource("MainController.fxml"));
         primaryStage.setTitle("Hello World");
 
+        //
+        ////
+        //
+
+        /*
+        myScene.setOnDragOver(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent event) {
+                //System.out.print("\nDrag Over");
+                Dragboard db = event.getDragboard();
+                if (db.hasFiles()) {
+                    event.acceptTransferModes(TransferMode.COPY);
+                    //System.out.print("\nDrag Over");
+                } else {
+                    event.consume();
+                }
+            }
+        });
+
+        myScene.setOnDragDropped(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent event) {
+                System.out.print("\nDrag Dropped");
+                Dragboard db = event.getDragboard();
+                boolean success = false;
+                if (db.hasFiles()) {
+                    success = true;
+                    String filePath = null;
+                    for (File file : db.getFiles()) {
+                        filePath = file.getAbsolutePath();
+                        System.out.println(filePath);
+                    }
+                }
+                event.setDropCompleted(success);
+                event.consume();
+            }
+        });
+*/
 
         /*
         Button btn = new Button();
@@ -31,7 +76,7 @@ public class Main extends Application {
 
 
 
-        primaryStage.setScene(new Scene(root, 500, 700));
+        primaryStage.setScene(new Scene(myScene, 500, 700));
         primaryStage.show();
     }
 

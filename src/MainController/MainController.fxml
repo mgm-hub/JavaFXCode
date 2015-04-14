@@ -30,12 +30,7 @@
    <rowConstraints>
       <RowConstraints />
       <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints maxHeight="1.7976931348623157E308" />
-      <RowConstraints />
-      <RowConstraints />
+
    </rowConstraints>
    <padding>
       <Insets bottom="40.0" left="40.0" right="40.0" top="60.0" />

@@ -1,9 +1,11 @@
 package MainController;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -11,6 +13,7 @@ import javafx.scene.control.Button;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 
@@ -51,14 +54,14 @@ public class Controller
     private void textFieldDragAction(Event event)
     {
         Dragboard myDragBoard = MainView.startDragAndDrop(TransferMode.ANY);
+        //System.out.println("\nTextFieldDrag");
 
 
-        System.out.println("\nTextFieldDrag");
+
         //System.out.println("\nDrag board : "+myDragBoard.toString());
-
-
-
     }
+
+
 
 
 
